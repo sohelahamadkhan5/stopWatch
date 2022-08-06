@@ -45,7 +45,7 @@ document.getElementById("start_stop").onclick = function() {
             console.log("remainder after sec"+remainder);
             console.log("-----------------------------"); */
             
-            formattedTime = leadingZero(hour)+":"+leadingZero(minutes)+":"+leadingZero(seconds)+" "+ leadingZero(remainder);
+            formattedTime = "<span id= 'hr-min-sec'>"+leadingZero(hour)+":"+leadingZero(minutes)+":"+leadingZero(seconds)+"</span>" +" "+ "<span id='vl'>"+ " " +"</span> " + "<span id= 'leadingZero'>" + leadingZero(remainder)+"</span>";
 
             document.getElementById("time").innerHTML = formattedTime;   
         },10);
@@ -60,7 +60,7 @@ document.getElementById("start_stop").onclick = function() {
 document.getElementById("reset").onclick = function(){
     if(!isRunning){
         elapsedTime = 0
-        document.getElementById("time").innerHTML = "00:00:00 000";
+        document.getElementById("time").innerHTML = "<span id='hr-min-sec'>"+"00:00:00 "+ "</span>" +" "+ "<span id='vl'>"+ " " +"</span> "+"<span id = 'leadingZero'>"+"000"+"</span>";
     }
     else{
         startTime = new Date().getTime();
