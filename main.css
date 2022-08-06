@@ -118,6 +118,11 @@ body{
         margin: 0 ;
         border: none;
     }
+    .controls{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     #time{
         font-size: 34px;
