@@ -1,0 +1,131 @@
+:root{
+    --primary: #132631;
+    --bodycolor: aliceblue;
+    --pointerCursor: pointer;
+    --dark: rgba(143, 143, 143, 0.719);
+    --sucess: yellowgreen;
+    --danger:red;
+    --reset:yellow;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bodycolor);
+    /* font-family: "Baloo Bhai 2","sans-serif"; */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+}
+
+body{
+    font-family: "Baloo Bhai 2","sans-serif";
+}
+
+body{
+    height: 99vh;
+    border: none;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+}
+
+.watch{
+    padding: 12px;
+    width: 70%;
+    margin: auto;
+    border-radius: 12px;
+    border: 3px solid var(--primary);
+}
+
+#time{
+    font-size: 84px;
+    text-align: left;  
+}
+
+.watch .controls{
+    height: 12vh;
+    padding: auto;
+}
+.watch .controls .btn{
+    margin: 0 12px;
+}
+
+.btn{
+    width: 130px;
+    height: 36px;
+    /* background-color: #fff;   */
+    color: #132631;
+    border-radius: 12px;
+    border: 3px solid var(--primary);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3.2px;
+    cursor: var(--pointerCursor);
+    transition:  0.4s;
+    font-family: "Baloo Bhai 2","sans-serif";
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: var(--primary);
+    /* opacity: 0.7 ; */
+}
+
+/* #start:active{
+    background-color: var(--sucess);
+}
+#stop:active{
+    background-color: var(--danger);
+}
+#reset:active{
+    background-color: var(--reset);
+}
+ */
+
+ #start_stop:active{
+    font-size: 13px;
+    transition: 0.0s;
+ }
+ #reset:active{
+    font-size: 13px;
+    transition: 0.0s;
+ }
+
+ /* //Media Queries */
+
+ @media only screen and (max-width:578px){
+    body{
+        height: 100vh;
+    }
+    .container{
+        width: 90%;
+    }
+    .watch{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 0   ;
+    }
+
+    #time{
+        font-size: 34px;
+        text-align: justify;
+        padding-left: 7%;
+    }
+
+    .watch .controls .btn{
+        margin: 12px 0;
+    }
+
+ }
